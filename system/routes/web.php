@@ -17,20 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/informatika', function () {
-    return "Saya Mahasiswa Informatika";
+    return view("informatika");
 });
-Route::get('/agroindutri', function () {
-    return "Saya Mahasiswa Agroindutri";
-});
+Route::get('/agroindustri', function () {
+    return view("agroindustri");});
+
 Route::get('/sipil', function () {
-    return "Saya Mahasiswa Teknik Sipil";
+    return view("sipil");
+
 });
 Route::get('/tambang', function () {
-    return "Saya Mahasiswa Pertambangan";
+    return view("tambang");
 });
+
 Route::get('/mesin', function () {
-    return "Saya Mahasiswa Teknik Mesin";
+    return view("mesin");
+
 });
 Route::get('/elektro', function () {
-    return "Saya Mahasiswa Teknik Elektro";
+    return view("elektro");
+
 });
