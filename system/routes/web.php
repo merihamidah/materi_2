@@ -47,5 +47,8 @@ Route::get('/wardahvelvet', function () {
 Route::get('/wardahliptint', function () {
     return view("wardahliptint");
 });
+Route::get('template', function(){
+    return view('template.base');
+});
 
 

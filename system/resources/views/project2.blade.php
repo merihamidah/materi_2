@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url('public')}}/style.css">
     <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href=" {{url('public')}}/plugins/fontawesome-free/css/all.min.css">
+  
     <title>project2</title>
   </head>
   <body font-family: 'Comic Neue', cursive;>
@@ -54,67 +55,122 @@
         </div>
       </li>
     </ul>
+      
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    
   </div>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          Meri Hamidah
+          <img src="{{url('public')}}/img/img1.jpg" alt="User Avatar" style="height:100%; width:30px; " class=" img-circle">
+        </a>
+        <div class="dropdown-menu">
+            <form class="px-6 py-3">
+              <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                  <label class="form-check-label" for="dropdownCheck">
+                    Remember me
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+          </div>
+      </li>
+    </ul>
 </nav>
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid" alt="responsive-image">
   <div class="container">
     <h3 class="display-4 text-center" style="margin-top: 50px;"> 
-    <span> Love Yourself With Your Beauty</span>   
+    <span text-white> Love Yourself With Your Beauty</span>   
     </h3>
   </div>
+  
 </div>
-<div class="container text-center">
-    <div class="row" style="margin-bottom: 80px;">
-      <div class="col">
-        <h3><u>Trending Items</u></h3>
-      </div>
+<div class="line">
+</div>
+<h2 class="text-center"> <u>Trending Items</u></h2>
+<div class="container text-justify"  style="margin-top:50px;">
+  <div class="row">
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+            <img src="{{ url('public')}}/img/img1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">
+                <h4><a href="{{ url("/wardahliptint") }}"">Liptint Wardah</a></h4><br>
+                <p >30.000</p>
+                <p>
+            </div>
+        </div>
     </div>
-<div class="container text-justify" >
-      <div class="row">
-        <div class="col">
-          <img src="{{ url('public')}}/img/img1.jpg">
-          <h4><a href="{{ url("/wardahliptint") }}"">Liptint Wardah</a></h4><br>
-          <p >30.000</p>
-        </div>
-        <div class="col">
-          <img src="{{ url('public')}}/img/img2.jpg">
-          <h4>BB Chusion Laneige</h4><br>
-          <p >39.000</p>
-        </div>
-        <div class="col">
-          <img src="{{ url('public')}}/img/img9.jpg">
-          <h4>Serum Scarlet acne</h4><br>
-          <p >62.000</p>
-        </div>
-          <div class="col">
-          <img src="{{ url('public')}}/img/img10.jpg">
-          <h4>Serum Scarlet</h4><br>
-          <p >62.000</p>
+    <div class="col"><div class="card" style="width: 18rem;">
+          <img src="{{ url('public')}}/img/img9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">
+              <h4><a href="#">Serum Acne Scarlett</a></h4><br>
+              <p >62.000</p>
+              <p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <img src="{{ url('public')}}/img/img6.webp">
-          <h4><a href="{{ url("/wardahvelvet") }}"">LipMousee Matte Velvet</a> </h4><br>
+  </div>
+  <div class="row">
+    <div class="col"> <div class="card" style="width: 18rem;">
+          <img src="{{ url('public')}}/img/img10.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">
+              <h4><a href="#">Serum Scarlett</a></h4><br>
+              <p >62.000</p>
+              <p>
+          </div>
+        </div>
+      </div>
+      <div class="col"> <div class="card" style="width: 18rem;">
+          <img src="{{ url('public')}}/img/img6.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">
+              <h4><a href="{{ url("/wardahvelvet") }}"">LipMousee Matte Velvet</a> </h4><br>
           <p >70.000</p>
+              <p>
+          </div>
         </div>
-        <div class="col">
-          <img src="{{ url('public')}}/img/img9.jpg">
-          <h4>Serum Scarlet acne</h4><br>
-          <p >62.000</p>
-        </div>
-        <div class="col">
-          <img src="{{ url('public')}}/img/img10.jpg">
-          <h4>Serum Scarlet</h4><br>
-          <p >62.000</p>
-        </div>
-        <div class="col">
-          <img src="{{ url('public')}}/img/img5.jpg">
-          <h4>Lip Matte Velvet</h4><br>
-          <p >70.000</p>
-        </div>
-       </div>
-      
+      </div>
+  </div>
+  <div class="row">
+          <div class="col"> <div class="card" style="width: 18rem;">
+                <img src="{{ url('public')}}/img/img2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">
+                    <h4><a href="#">BB Chusion Laneige</a></h4><br>
+                    <p >80.000</p>
+                    <p>
+                </div>
+              </div>
+            </div>
+        </div>  
         </div>
       </div>
     </div>
