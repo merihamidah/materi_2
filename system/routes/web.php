@@ -38,3 +38,14 @@ Route::get('/elektro', function () {
     return view("elektro");
 
 });
+Route::get('/project2', function () {
+    return view("project2");
+});
+Route::get('/wardahvelvet', function () {
+    return view("wardahvelvet");
+});
+Route::get('/wardahliptint', function () {
+    return view("wardahliptint");
+});
+
+
