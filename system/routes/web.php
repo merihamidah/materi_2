@@ -40,6 +40,8 @@ Route::get('/elektro', function () {
 });
 Route::get('/project2', function () {
     return view("project2");
+});Route::get('/login', function () {
+    return view("login");
 });
 Route::get('/wardahvelvet', function () {
     return view("wardahvelvet");

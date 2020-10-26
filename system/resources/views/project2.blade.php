@@ -75,29 +75,17 @@
           Meri Hamidah
           <img src="{{url('public')}}/img/img1.jpg" alt="User Avatar" style="height:100%; width:30px; " class=" img-circle">
         </a>
-        <div class="dropdown-menu">
-            <form class="px-6 py-3">
-              <div class="form-group">
-                <label for="exampleDropdownFormEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-              </div>
-              <div class="form-group">
-                <label for="exampleDropdownFormPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                  <label class="form-check-label" for="dropdownCheck">
-                    Remember me
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">New around here? Sign up</a>
-            <a class="dropdown-item" href="#">Forgot password?</a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <i class="fa fa-user"></i> Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="fa fa-setting"></i> Setting
+            </a>
+            <a href="{{ url("/login") }}" class="dropdown-item">
+              <i class="fa fa-sign-out"></i> Logout
+            </a>
+           <div class="dropdown-divider"></div>
           </div>
       </li>
     </ul>
@@ -105,7 +93,7 @@
   <div class="jumbotron jumbotron-fluid" alt="responsive-image">
   <div class="container">
     <h3 class="display-4 text-center" style="margin-top: 50px;"> 
-    <span text-white> Love Yourself With Your Beauty</span>   
+    <span text-white> Be Natural, Be Beautiful, Be You</span>   
     </h3>
   </div>
   
