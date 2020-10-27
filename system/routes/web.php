@@ -64,5 +64,42 @@ Route::get('kategori', function(){
 Route::get('login2', function(){
     return view('login2');
 });
+Route::get('project3', function(){
+    return view('project3.base');
+});
+Route::get('promo', function(){
+    return view('promo');
+});
+Route::get('home', function(){
+    return view('home');
+});
+Route::get('product', function(){
+    return view('product');
+});
+Route::get('category', function(){
+    return view('category');
+});
+Route::get('promo', function(){
+    return view('promo');
+});
+Route::get('loginp3', function(){
+    return view('loginp3');
+});
+Route::get('register', function(){
+    return view('register');
+});
+Route::get('webtemplate', function(){
+    return view('webtemplate');
+});
+Route::get('aboutus', function(){
+    return view('aboutus');
+});
+Route::get('gallery', function(){
+    return view('gallery');
+});
+Route::get('contact', function(){
+    return view('contact');
+});
+
 
 
