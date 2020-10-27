@@ -28,6 +28,9 @@ img{
 h3 {
 	font-family: 'Comic Neue', cursive;
 }
+h2 {
+	font-family: 'Pacifico',cursive;
+}
 .line {
 	float: left;
 	background-color: #f2c9c9;

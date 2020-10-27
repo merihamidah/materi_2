@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,13 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url('public')}}/style.css">
     <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href=" {{url('public')}}/plugins/fontawesome-free/css/all.min.css">
   
     <title>project2</title>
   </head>
   <body font-family: 'Comic Neue', cursive;>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f2c9c9;">
-  <a class="navbar-brand" href="#" ><h3>Beauty Up</h3></a>
+  <a class="navbar-brand" href="#" ><h2 >Beauty Up</h2></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -114,7 +114,7 @@
             </div>
         </div>
     </div>
-    <div class="col"><div class="card" style="width: 18rem;">
+    <div class="col" style="margin-bottom: 20px;"><div class="card" style="width: 18rem;">
           <img src="{{ url('public')}}/img/img9.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
