@@ -11,19 +11,24 @@
           <span>Home</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/product') }}">
+        <a class="nav-link" href="{{ url('/produk') }}">
           <i class="fas fa-fw fa-shopping-cart"></i>
-          <span>Product</span></a>
+          <span>Produk</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/category') }}">
+        <a class="nav-link" href="{{ url('/kategori') }}">
           <i class="fas fa-fw fa-bars"></i>
-          <span>Category</span></a>
+          <span>Kategori</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{{ url('/promo') }}">
           <i class="fas fa-fw fa-tags "></i>
           <span>Promo</span></a>
+      </li>  
+       <li class="nav-item active">
+        <a class="nav-link" href="{{ url('user') }}">
+          <i class="fas fa-fw fa-bars"></i>
+          <span>User</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
@@ -78,11 +83,6 @@
             <a class="collapse-item" href="{{ url('public')}}/p3/{{ url('public')}}/p3/blank.html">Blank Page</a>
           </div>
         </div>
-      </li>
-      <li class="nav-item">
-      </li>
-      <li class="nav-item">
-       
       </li>
       <hr class="sidebar-divider d-none d-md-block">
       <div class="text-center d-none d-md-inline">

@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Skin Beauty Beauty & Spa Category Bootstrap Responsive Web Template | Contact Us :: W3layouts</title>
+	<title>Beauty Up</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -56,10 +56,11 @@
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="{{ url('webtemplate')}}">Home</a></li>
-								<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="{{ url('aboutus')}}" class="active">About Us</a></li>
+								<li><a href="{{ url('client')}}">Home</a></li>
+								<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="{{ url('aboutus')}}" >About Us</a></li>
 								<li><a href="{{ url('gallery')}}">Gallery</a></li>
-								<li><a href="{{ url('contact')}}">Contact Us</a></li>
+								<li><a href="{{ url('contact')}}" class="active">Contact Us</a></li>
+								<li><a href="{{ url('loginp3')}}"><i class="fa fa-user">Login</i></a></li>
 							</ul>
 						</nav>
 					</div>

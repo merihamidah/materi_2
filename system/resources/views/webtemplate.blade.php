@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>web template</title>
+	<title> Web template </title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -21,11 +21,13 @@
 	<!-- Custom-Files -->
 	<link rel="stylesheet" href="{{ url('public')}}/_src/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link href="{{ url('public')}}/_src/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
-	<!-- banner slider -->
 	<link rel="stylesheet" href="{{ url('public')}}/_src/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
 	<link href="{{ url('public')}}/_src/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
 	<link href="//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
 	 rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
@@ -34,27 +36,27 @@
 </head>
 
 <body>
-	<!-- main banner -->
-	<div class="main-top" id="home">
+    <div class="main-top" id="home">
 		<!-- header -->
 		<header>
 			<div class="container-fluid">
 				<div class="header d-md-flex justify-content-between align-items-center py-3 px-xl-5 px-lg-3 px-2">
 					<!-- logo -->
 					<div id="logo">
-						<h1><a class="" href="index.html"> Beauty Up</a></h1>
+						<h1><a class="" href="index.html"> Beauty Up </a></h1>
 					</div>
 					<!-- //logo -->
 					<!-- nav -->
 					<div class="nav_w3ls">
-						<nav>
+							<nav>
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="{{ url('webtemplate') }}" class="active">Home</a></li>
-								<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="{{ url('aboutus') }}" >About Us</a></li>
-								<li><a href="{{ url('gallery') }}" >Gallery</a></li>
-								<li><a href="{{ url('contact') }}" >Contact Us</a></li>
+								<li><a href="{{ url('webtemplate')}}" class="active">Home</a></li>
+								<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="{{ url('aboutus')}}" >About Us</a></li>
+								<li><a href="{{ url('gallery')}}">Gallery</a></li>
+								<li><a href="{{ url('contact')}}">Contact Us</a></li>
+								<li><a href="{{ url('loginp3')}}"><i class="fa fa-user">Login</i></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -65,79 +67,75 @@
 		<!-- //header -->
 
 		<!-- banner -->
-		<div class="banner_w3lspvt">
-			<div class="csslider infinity" id="slider1">
-				<input type="radio" name="slides" checked="checked" id="slides_1" />
-				<input type="radio" name="slides" id="slides_2" />
-				<input type="radio" name="slides" id="slides_3" />
-				<ul class="banner_slide_bg">
-					<li>
-						<div class="container">
-							<div class="w3ls_banner_txt">
-								<p>Welcome to </p>
-								<h3 class="w3ls_pvt-title">Beauty Up</h3>
-								<a href="{{ url('loginp3')}}" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Login</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="container">
-							<div class="w3ls_banner_txt text-center mx-auto">
-								<p>We Provide a Wide Range Of Beauty Products</p>
-								<h3 class="w3ls_pvt-title">Beauty & Skin</h3>
-								<a href="about.html" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Read More</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="container">
-							<div class="w3ls_banner_txt text-right ml-auto">
-								<p>We have the best and most popular products</p>
-								<h3 class="w3ls_pvt-title">K-Beauty</h3>
-								<a href="about.html" style="max-width: 150px;" class="btn button-style mt-sm-5 mt-4">Read More</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<div class="arrows">
-					<label for="slides_1"></label>
-					<label for="slides_2"></label>
-					<label for="slides_3"></label>
-				</div>
-				<div class="navigation">
-					<div>
-						<label for="slides_1"></label>
-						<label for="slides_2"></label>
-						<label for="slides_3"></label>
-					</div>
-				</div>
-			</div>
+		<div class="banner_w3lspvt-2">
+
 		</div>
 		<!-- //banner -->
 	</div>
-	<!-- //main banner -->
 
 	<!-- about -->
-	<div class="about py-5" id="about">
+<div class="about py-5" id="about">
 		<div class="container py-xl-5 py-lg-3">
 			<h3 class="title text-center text-bl font-weight-bold mb-1">Welcome to our Website</h3>
 			<p class="title-sub text-center mb-sm-5 mb-4">New Product</p>
 			<div class="row about-bottom-w3l text-center pt-xl-5">
-				<div class="col-md-6">
+				<div class="col-md-2">
 					<div class="about-grid-main">
 						<img src="{{ url('public')}}/img/img10.jpg" alt="" class="img-fluid">
-						<h4 class="my-3">Serum Scarlett</h4>
-						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4"><span class="fa fa-hand-o-right mr-2" aria-hidden="true"></span>
-							Read More
+						<h5 class="my-3">Serum Scarlett</h5>
+						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4">
+							Rp.90.000.,
+							
 						</a>
 					</div>
 				</div>
-				<div class="col-md-6 about-grid mt-md-0 mt-4">
+				<div class="col-md-2">
+					<div class="about-grid-main">
+						<img src="{{ url('public')}}/img/img10.jpg" alt="" class="img-fluid">
+						<h5 class="my-3">Serum Scarlett</h5>
+						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4">
+							Rp.90.000.,
+							
+						</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="about-grid-main">
+						<img src="{{ url('public')}}/img/img10.jpg" alt="" class="img-fluid">
+						<h5 class="my-3">Serum Scarlett</h5>
+						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4">
+							Rp.90.000.,
+							
+						</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="about-grid-main">
+						<img src="{{ url('public')}}/img/img10.jpg" alt="" class="img-fluid">
+						<h5 class="my-3">Serum Scarlett</h5>
+						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4">
+							Rp.90.000.,
+							
+						</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="about-grid-main">
+						<img src="{{ url('public')}}/img/img10.jpg" alt="" class="img-fluid">
+						<h5 class="my-3">Serum Scarlett</h5>
+						<a href="{{ url('loginp3') }}" class="button-w3ls mt-4">
+							Rp.90.000.,
+							
+						</a>
+					</div>
+				</div>
+				<div class="col-md-2 about-grid mt-md-0 mt-4">
 					<div class="about-grid-main">
 						<img src="{{ url('public')}}/img/img6.webp" alt="" class="img-fluid">
-						<h4 class="my-3">Lip Mousse Matte Velvet Wardah</h4>
-						<a href="{{ url('loginp3') }}"  class="button-w3ls mt-4"><span class="fa fa-hand-o-right mr-2" aria-hidden="true"></span>
-							Read More
+						<h5 class="my-3">Lip Mousse Matte Velvet Wardah</h5>
+						<a href="{{ url('loginp3') }}"  class="button-w3ls mt-4">
+							Rp.90.000.,
+							
 						</a>
 					</div>
 				</div>
@@ -327,3 +325,4 @@
 </body>
 
 </html>
+	
