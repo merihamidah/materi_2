@@ -34,7 +34,7 @@
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none d-lg-block">
-                  <img src="{{ url('public')}}/img/lg1.jpg" style="width: 500px;" alt="" class="">
+                  <img src="{{ url('public')}}/img/gis.png" style="width: 500px; height:670px;" alt="" class="">
               </div>
               <div class="col-lg-6">
                 <div class="p-5">

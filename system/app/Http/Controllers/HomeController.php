@@ -22,4 +22,7 @@ class HomeController extends Controller {
     function showContact(){
         return view('contact');
     }
+        function test($produk){
+        echo "Nama produk $produk";
+    }
 }

@@ -52,7 +52,7 @@
 							<label for="drop" class="toggle">Menu</label>
 							<input type="checkbox" id="drop" />
 							<ul class="menu">
-								<li><a href="{{ url('client')}}">Home</a></li>
+								<li><a href="{{ url('user/client')}}">Home</a></li>
 								<li class="mx-lg-4 mx-md-3 my-md-0 my-2"><a href="{{ url('aboutus')}}" class="active">About Us</a></li>
 								<li><a href="{{ url('gallery')}}">Gallery</a></li>
 								<li><a href="{{ url('contact')}}">Contact Us</a></li>

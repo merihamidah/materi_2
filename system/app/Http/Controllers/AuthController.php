@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class AuthController extends Controller {
@@ -25,13 +25,13 @@ class AuthController extends Controller {
     }
     function registerProcess(){
         $user = new User;
-        $user->nama = request('nama');
         $user->username = request('username');
         $user->email = request('email');
+        $user->nama = request('nama');
         $user->password = bcrypt(request('password'));
         $user->save();
         
-        return redirect('home')->with('success','Data Berhasil Ditambahkan');
+       return redirect('loginp3')->with('success','Data Berhasil Ditambahkan');
     }
 
      function showForgot(){

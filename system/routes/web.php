@@ -1,11 +1,13 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ClientProdukController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -77,36 +79,22 @@ Route::get('webtemplate', [HomeController::class, 'showWebtemplate']);
 Route::get('aboutus', [HomeController::class, 'showAboutUS']);
 Route::get('gallery', [HomeController::class, 'showGallery']);
 Route::get('contact', [HomeController::class, 'showContact']);
+//parameters routing
+Route::get('test/{produk}', [HomeController::class, 'test']);
+//prefix routing
+Route::prefix('admin')->middleware('auth')->group(function(){
+//resource routing
+    Route::resource('produk', ProdukController::class);
+    Route::resource('kategori', KategoriController::class);
+    Route::resource('user', UserController::class);
+});
 
-Route::get('produk', [ProdukController::class, 'index']);
-Route::get('produk/create', [ProdukController::class, 'create']);
-Route::post('produk', [ProdukController::class, 'store']);
-Route::get('produk/{produk}', [ProdukController::class, 'show']);
-Route::get('produk/{produk}/edit', [ProdukController::class, 'edit']);
-Route::put('produk/{produk}', [ProdukController::class, 'update']);
-Route::delete('produk/{produk}', [ProdukController::class, 'destroy']);
-
-Route::get('client', [ClientProdukController::class, 'index']);
-Route::get('client/{produk}', [ClientProdukController::class, 'show']);
-
-Route::get('kategori', [KategoriController::class, 'index']);
-Route::get('kategori/create', [KategoriController::class, 'create']);
-Route::post('kategori', [KategoriController::class, 'store']);
-Route::get('kategori/{kategori}', [KategoriController::class, 'show']);
-Route::get('kategori/{kategori}/edit', [KategoriController::class, 'edit']);
-Route::put('kategori/{kategori}', [KategoriController::class, 'update']);
-Route::delete('kategori/{kategori}', [KategoriController::class, 'destroy']);
+Route::prefix('user')->group(function(){
+    Route::get('client', [ClientProdukController::class, 'index']);
+    Route::get('client/{produk}', [ClientProdukController::class, 'show']);
+});
 //authetication
-Route::get('user', [UserController::class, 'index']);
-Route::get('user/create', [UserController::class, 'create']);
-Route::post('user', [UserController::class, 'store']);
-Route::get('user/{user}', [UserController::class, 'show']);
-Route::get('user/{user}/edit', [UserController::class, 'edit']);
-Route::put('user/{user}', [UserController::class, 'update']);
-Route::delete('user/{user}', [UserController::class, 'destroy']);
-
-
-Route::get('loginp3', [AuthController::class, 'showLogin']);
+Route::get('loginp3', [AuthController::class, 'showLogin'])->name('login');
 Route::post('loginp3', [AuthController::class, 'loginProcess']);
 Route::post('logout', [AuthController::class, 'logout']);
 Route::get('register', [AuthController::class, 'showRegistration']);

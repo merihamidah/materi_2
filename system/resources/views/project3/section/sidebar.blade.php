@@ -11,12 +11,12 @@
           <span>Home</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/produk') }}">
+        <a class="nav-link" href="{{ url('/admin/produk') }}">
           <i class="fas fa-fw fa-shopping-cart"></i>
           <span>Produk</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="{{ url('/kategori') }}">
+        <a class="nav-link" href="{{ url('/admin/kategori') }}">
           <i class="fas fa-fw fa-bars"></i>
           <span>Kategori</span></a>
       </li>
@@ -26,7 +26,7 @@
           <span>Promo</span></a>
       </li>  
        <li class="nav-item active">
-        <a class="nav-link" href="{{ url('user') }}">
+        <a class="nav-link" href="{{ url('admin/user') }}">
           <i class="fas fa-fw fa-bars"></i>
           <span>User</span></a>
       </li>
@@ -37,28 +37,13 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Auth</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="{{ url('public')}}/p3/buttons.html">Buttons</a>
-            <a class="collapse-item" href="{{ url('public')}}/p3/cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="{{ url('public')}}/p3/utilities-color.html">Colors</a>
-            <a class="collapse-item" href="{{ url('public')}}/p3/utilities-border.html">Borders</a>
-            <a class="collapse-item" href="{{ url('public')}}/p3/utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="{{ url('public')}}/p3/utilities-other.html">Other</a>
+            <h6 class="collapse-header">Pages</h6>
+            <a class="collapse-item" href="{{ url('loginp3') }}">Login</a>
+            <a class="collapse-item" href="{{ url('register') }}">Register</a>
           </div>
         </div>
       </li>
@@ -74,8 +59,6 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="{{ url('public')}}/p3/{{ url('public')}}/p3/login.html">Login</a>
-            <a class="collapse-item" href="{{ url('public')}}/p3/{{ url('public')}}/p3/register.html">Register</a>
             <a class="collapse-item" href="{{ url('public')}}/p3/{{ url('public')}}/p3/forgot-password.html">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>

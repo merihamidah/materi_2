@@ -8,7 +8,7 @@
                         Kategori Produk
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('kategori') }}" method="post">
+                        <form action="{{ url('admin/kategori') }}" method="post">
                               @csrf
                             <div class="form-group">
                               <label for="" class=" control-label">Nama</label>

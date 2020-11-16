@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         Data User
-                        <a href="{{ url("user/create") }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah Data</i></a>
+                        <a href="{{ url("admin/user/create") }}" class="btn btn-dark float-right"><i class="fa fa-plus"> Tambah Data</i></a>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -23,9 +23,9 @@
                                    <td>{{ $loop->iteration }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="{{ url('user', $user->id) }}" class="btn btn-dark"><i class="fa fa-info"></i></a>
-                                            <a href="{{ url('user', $user->id) }}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>  
-                                            @include('project3.utils.delete', ['url' => url('user', $user->id)])                             
+                                            <a href="{{ url('admin/user', $user->id) }}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+                                            <a href="{{ url('admin/user', $user->id) }}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>  
+                                            @include('project3.utils.delete', ['url' => url('admin/user', $user->id)])                             
                                         </div>
                                     </td>
                                    <td>{{ $user->username }}</td>

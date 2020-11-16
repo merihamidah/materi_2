@@ -18,7 +18,7 @@
                                    @foreach($list_produk as $produk)
                                 <tr>                                
                                    <td>
-                                       <a href={{ url('client', $produk->id) }}"  > {{ $produk->nama }}</a>                        
+                                       <a href={{ url('user/client', $produk->id) }}"  > {{ $produk->nama }}</a>                        
                                     </td>
                                     <td>
                                       Rp. {{ number_format($produk->harga) }}

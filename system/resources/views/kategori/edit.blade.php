@@ -8,7 +8,7 @@
                         Kategori Produk
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('kategori', $kategori->id) }}" method="post">
+                        <form action="{{ url('admin/kategori', $kategori->id) }}" method="post">
                               @csrf
                               @method("PUT")
                             <div class="form-group">

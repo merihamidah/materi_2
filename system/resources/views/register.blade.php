@@ -29,35 +29,31 @@
         <!-- Nested Row within Card Body -->
         <div class="row">
           <div class="col-lg-5 d-none d-lg-block">
-              <img src="{{ url('public')}}/img/rg.jpg" style="width: 500px; height:670px; " alt="" class="">
+              <img src="{{ url('public')}}/img/wdw.jpg" style="width: 500px; height:670px; " alt="" class="">
           </div>
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user" action="{{ url('register') }}" method="post">
-                   @csrf              
+              <form action"{{url('register')}}" class="user" method="POST">
+                    @csrf
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="exampleInputUsername"  placeholder="username" name="username">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name=" email">
+                    </div>
                   <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="exampleName" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Username">
-                </div>            
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
-                  </div>
-                </div>                
-                    <button class="btn btn-primary btn-user btn-block"> Register Account</button>                 
-                </a>
-                <hr>
+                      <input type="text" class="form-control form-control-user" id="exampleInputnama"  placeholder="nama" name="nama">
+                    </div>    
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
+                    </div>   
+                    <div class="form-group">
+                     <input type="submit" class="form-control btn btn-primary btn-user btn-block" value=" Register ">
+                  </div>               
+                      <hr>
                 <a href="#" class="btn btn-google btn-user btn-block">
                   <i class="fab fa-google fa-fw"></i> Register with Google
                 </a>
