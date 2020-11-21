@@ -2,7 +2,38 @@
 @section('content')
      <div class="container">
         <div class="row">
-            <div class="col-md-12 mt-5">
+            <div class="col-md-12 mt-5">                
+                    <div class="card">
+                    <div class="card-header">
+                        Filter
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url('admin/user/filter') }}" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="" class="control-label"> Username </label>
+                                <input type="text" name="username" class="form-control" value="{{ $username ?? "" }}">
+                            </div>
+                            </div>   
+                            <div class="col-md-4">                               
+                            <div class="form-group">                              
+                                    <label for="" class="control-label"> Nama </label>
+                                    <input type="text" name="nama" class="form-control" value="{{ $nama ?? "" }}">
+                            </div>
+                            </div>                            
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="" class="control-label"> Email </label>
+                                    <input type="text" name="email" class="form-control" value="{{ $email ?? "" }}">
+                                </div>
+                             </div>
+                        </div>
+                         <button class="btn btn-dark float-right"><i class="fa fa-search"> Cari </i></button>
+                        </form>
+                    </div>
+
                 <div class="card">
                     <div class="card-header">
                         Data User

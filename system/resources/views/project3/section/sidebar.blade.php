@@ -44,6 +44,7 @@
             <h6 class="collapse-header">Pages</h6>
             <a class="collapse-item" href="{{ url('loginp3') }}">Login</a>
             <a class="collapse-item" href="{{ url('register') }}">Register</a>
+            <a class="collapse-item" href="{{ url('user/client') }}">Halaman Client</a>
           </div>
         </div>
       </li>

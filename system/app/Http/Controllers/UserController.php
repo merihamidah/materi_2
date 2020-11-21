@@ -43,5 +43,17 @@ class UserController extends Controller {
         $user->delete();
          return redirect('admin/user')->with('danger', 'Data berhasil dihapus');
     }
+    
+     function filter(){
+            $nama = request('nama');
+            $username = request('username');
+            $email = request('email');
+            $data['list_user'] = User::where('nama','like', "%$nama%")->where('username', 'like', "%$username%")->where('email', 'like', "%$email%")->get();
+            $data['nama'] = $nama;
+            $data['username'] = $username;
+            $data['email'] = $email;
+
+        return view('user.index', $data);
+    }
 }
 

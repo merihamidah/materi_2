@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 class HomeController extends Controller {
     function showHome(){
         return view('home');
+    }function showWebtemplate(){
+        return view('webtemplate');
     }
      function showProduct(){
         return view('product');

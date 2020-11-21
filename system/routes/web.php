@@ -84,12 +84,16 @@ Route::get('test/{produk}', [HomeController::class, 'test']);
 //prefix routing
 Route::prefix('admin')->middleware('auth')->group(function(){
 //resource routing
+    Route::post('user/filter',[UserController::class, 'filter']);
+    Route::post('kategori/filter',[KategoriController::class, 'filter']);    
+    Route::post('produk/filter',[ProdukController::class, 'filter']);
     Route::resource('produk', ProdukController::class);
     Route::resource('kategori', KategoriController::class);
     Route::resource('user', UserController::class);
 });
 
 Route::prefix('user')->group(function(){
+    Route::post('client/filter',[ClientProdukController::class, 'filter']);
     Route::get('client', [ClientProdukController::class, 'index']);
     Route::get('client/{produk}', [ClientProdukController::class, 'show']);
 });

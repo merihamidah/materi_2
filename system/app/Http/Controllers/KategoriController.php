@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Kategori;
+use App\Models\Produk;
 
 class KategoriController extends Controller {
     function index(){
@@ -36,6 +37,13 @@ class KategoriController extends Controller {
     function destroy(Kategori $kategori){
         $kategori->delete();
          return redirect('admin/kategori')->with('danger', 'Data berhasil dihapus');
+    }
+     function filter(){
+            $nama = request('nama');
+            $data['list_kategori'] = Kategori::where('nama','like', "%$nama%")->get();
+             $data['nama'] = $nama;
+
+        return view('kategori.index', $data);
     }
 }
 

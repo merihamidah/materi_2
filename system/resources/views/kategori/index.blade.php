@@ -2,7 +2,26 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mt-5">
+            <div class="col-md-12 mt-5">                
+                 <div class="card">
+                    <div class="card-header">
+                        Filter
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url('admin/kategori/filter') }}" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col">
+                             <div class="form-group">
+                                <label for="" class="control-label"> Nama </label>
+                                <input type="text" name="nama" class="form-control" value="{{ $nama ?? "" }}">
+                             </div>
+                            </div>
+                        </div>
+                         <button class="btn btn-dark float-right"><i class="fa fa-search"> Cari </i></button>
+                        </form>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         Data Kategori
@@ -27,7 +46,7 @@
                                             @include('project3.utils.delete', ['url' => url('admin/kategori', $kategori->id)])                             
                                         </div>
                                     </td>
-                                   <td>{{ $kategori->nama }}</td>
+                                   <td> <a href="{{ url('admin/kategori', $kategori->nama) }}" >{{ $kategori->nama }}</a></td>
                                  </tr>
                                 @endforeach
                             </tbody>
