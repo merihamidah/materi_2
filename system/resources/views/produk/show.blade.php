@@ -13,7 +13,8 @@
                      <p > 
                          Rp. {{ number_format($produk->harga) }} |
                          Stock : {{ $produk->stok }} |
-                         Berat : {{ $produk->berat }} gr 
+                         Berat : {{ $produk->berat }} gr |
+                         Seller : {{ $produk->seller->username }}
                      </p>
                      <p >
                        {!! nl2br($produk->deskripsi) !!}

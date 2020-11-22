@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produk;
+use Faker;
 class ClientProdukController extends Controller{
      function index(){
-        $data['list_produk'] = Produk::all();
+        $user = request()->user();
+        $data['list_produk'] = $user->produk;
         return view('client.index', $data);  
     }
     function show(Produk $produk){

@@ -33,6 +33,7 @@
                                 <th>No</th>
                                 <th>Aksi</th>
                                 <th>Nama</th>
+                                <th>Produk</th>
                             </thead>
                             <tbody>
                               
@@ -46,7 +47,8 @@
                                             @include('project3.utils.delete', ['url' => url('admin/kategori', $kategori->id)])                             
                                         </div>
                                     </td>
-                                   <td> <a href="{{ url('admin/kategori', $kategori->nama) }}" >{{ $kategori->nama }}</a></td>
+                                   <td> {{ $kategori->nama }}</td>
+                                   <td>{{ $kategori->produk_count }}</td>
                                  </tr>
                                 @endforeach
                             </tbody>
