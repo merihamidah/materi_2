@@ -46,6 +46,7 @@
                                 <th>Aksi</th>
                                 <th>Username</th>
                                 <th>Nama</th>
+                                <th>Jenis Kelamin</th>
                                 <th>Produk</th>
                                 <th>Email</th>
                             </thead>
@@ -62,6 +63,7 @@
                                     </td>
                                    <td>{{ $user->username }}</td>
                                    <td>{{ $user->nama }}</td>
+                                   <td>{{ $user->jenis_kelamin_string }}</td>
                                    <td>{{ $user->produk_count }}</td>
                                    <td>{{ $user->email }}</td>
                                  </tr>

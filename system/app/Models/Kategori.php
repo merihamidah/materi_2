@@ -1,13 +1,10 @@
 <?php 
 namespace App\Models;
-use App\Models\Produk;
+use App\Models\Traits\Relations\KategoriRelations;
 
 class Kategori extends Model{
+    use KategoriRelations;
     protected $table = 'kategori';
 
     
-    function produk(){
-        return $this->hasMany(Produk::class, 'id_kategori');
-    
-    }
 }

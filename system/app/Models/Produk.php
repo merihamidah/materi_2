@@ -1,15 +1,16 @@
 <?php 
 namespace App\Models;
-use App\Models\User;
+use App\Models\Traits\Attributes\ProdukAttributes;
+use App\Models\Traits\Relations\ProdukRelations;
 
 class Produk extends Model{
+   use ProdukAttributes, ProdukRelations;
     protected $table = 'produk';
 
-    function seller(){
-        return $this->belongsTo(User::class, 'id_user');
-    }
-    function kategori(){
-        return $this->belongsTo(Kategori::class, 'id_kategori');
-    }
+    protected $casts = [
+        'created_at'=>'datetime',
+        'updated_at'=>'datetime',
+        'berat'=>'decimal:2'
+    ];
 }
 //jika nama table kita dalam bahasa inggris kita tidak perlu menuliskan baris protected
