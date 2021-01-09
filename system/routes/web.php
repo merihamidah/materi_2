@@ -81,6 +81,8 @@ Route::get('gallery', [HomeController::class, 'showGallery']);
 Route::get('contact', [HomeController::class, 'showContact']);
 //parameters routing
 Route::get('test/{produk}', [HomeController::class, 'test']);
+Route::get('test-collection', [HomeController::class, 'testCollection']);
+
 //prefix routing
 Route::prefix('admin')->middleware('auth')->group(function(){
 //resource routing

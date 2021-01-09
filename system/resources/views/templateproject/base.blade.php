@@ -31,7 +31,8 @@
 	<link href="//fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese"
 	 rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	 rel="stylesheet">
+	 rel="stylesheet">	 
+   <link href="{{ url('public')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 	<!-- //Web-Fonts -->
 </head>
 
@@ -141,7 +142,17 @@
 	<!-- footer -->
 	@include('templateproject.section.footer')
 	<!-- //footer last -->
+ <script src="{{ url('public')}}/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="{{ url('public')}}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+ <!-- Page level custom scripts -->
+  <script src="{{ url('public')}}/js/demo/chart-area-demo.js"></script>
+  <script src="{{ url('public')}}/js/demo/chart-pie-demo.js"></script>
+  @stack('script')
+  <script>
+    $(".table-datatable").DataTable();
+   
 
+  </script>
 </body>
 
 </html>

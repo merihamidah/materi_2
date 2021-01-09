@@ -17,6 +17,14 @@
                      <p >
                        {!! nl2br($produk->deskripsi) !!}
                      </p>
+                     <br>
+                     <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{{ url('public', $produk->foto) }}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

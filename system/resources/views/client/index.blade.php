@@ -52,7 +52,7 @@
         <div class="col-md-9 mt-5">
                  <div class="card">
                     <div class="card-header text-center">
-                                <th>New Produk</th>
+                                <th>Produk</th>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -62,7 +62,7 @@
                                 <th>Stok</th>                                
                             </thead>
                             <tbody>
-                                   @foreach($list_produk as $produk)
+                                   @foreach($list_produk->sortBy('nama') as $produk)
                                 <tr>                                
                                    <td>
                                        <a href={{ url('user/client', $produk->id) }}"  > {{ $produk->nama }}</a>                        
@@ -79,6 +79,7 @@
                                
                             </tbody>
                         </table>
+                        {{ $list_produk->links() }}
                     </div>
                 </div>
            </div>

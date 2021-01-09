@@ -12,7 +12,7 @@ trait ProdukAttributes{
         return strftime("%d %b %Y", strtotime($this->created_at));
     }*/
     function handleUploadFoto(){
-        $this->handleDelete();
+      
         if(request()->hasFile('foto')){
             $foto = request()->file('foto');
             $destination = "images/produk";
