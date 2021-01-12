@@ -48,41 +48,34 @@
                         </div>
                     </div>
                 </div>
-
-        <div class="col-md-9 mt-5">
-                 <div class="card">
-                    <div class="card-header text-center">
-                                <th>Produk</th>
+        <div class="col-md-9">
+                  <div class="container">
+                    <div class="row">
+                        @foreach($list_produk->sortBy('nama') as $produk)                        
+                        <div class="col-md-4 mt-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="{{ url('public', $produk->foto) }}" alt="" class="img-fluid">
+                                  </div>
+                            <div class="card-body">
+                                <a href={{ url('user/client', $produk->id) }}"  > {{ $produk->nama }}</a>
+                                 <br>
+                                Rp. {{ number_format($produk->harga) }} | stok : {{ $produk->stok }}
+                            </div>
+                        </div>
+                        </div>
+                        @endforeach
                     </div>
-                    <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <th>Nama</th>
-                                <th>Harga</th>
-                                <th>Stok</th>                                
-                            </thead>
-                            <tbody>
-                                   @foreach($list_produk->sortBy('nama') as $produk)
-                                <tr>                                
-                                   <td>
-                                       <a href={{ url('user/client', $produk->id) }}"  > {{ $produk->nama }}</a>                        
-                                    </td>
-                                    <td>
-                                      Rp. {{ number_format($produk->harga) }}
-                                        
-                                    </td>
-                                     <td>
-                                        {{ $produk->stok }}
-                                    </td>
-                                 </tr>
-                                @endforeach
-                               
-                            </tbody>
-                        </table>
-                        {{ $list_produk->links() }}
+                    <div class="row mt-5">
+                        <div class="col-md-9 ">
+                            <div class="d-flex justify-content-center">
+                            {!! $list_produk->links() !!}
+                            </div>
+                        </div>
                     </div>
                 </div>
-           </div>
+             </div>
+        </div>
     </div>
 </div>
 

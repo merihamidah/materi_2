@@ -6,7 +6,7 @@ use Faker;
 class ClientProdukController extends Controller{
      function index(){
         $user = request()->user();
-        $data['list_produk'] = $user->produk=Produk::simplePaginate(10);
+        $data['list_produk'] = $user->produk=Produk::paginate(9);
         return view('client.index', $data);  
     }
     function show(Produk $produk){
@@ -32,6 +32,9 @@ class ClientProdukController extends Controller{
 
         return view('client.index', $data);
     }
+    /*
+    
+            */
 
 
 }

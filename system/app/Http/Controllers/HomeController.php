@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produk;
+use App\Models\Provinsi;
 class HomeController extends Controller {
     function showHome(){
         return view('home');
-    }function showWebtemplate(){
+    }
+    function showWebtemplate(){
         return view('webtemplate');
     }
      function showProduct(){
@@ -58,5 +60,10 @@ class HomeController extends Controller {
        return view('test-collection', $data);
        dd($list_bike, $collection, $list_produk);
 
+    }
+
+    function testAjax(){
+        $data['list_provinsi'] = Provinsi::all();
+        return view('test-ajax', $data);
     }
 }

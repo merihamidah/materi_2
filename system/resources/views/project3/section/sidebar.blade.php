@@ -24,6 +24,11 @@
         <a class="nav-link" href="{{ url('/promo') }}">
           <i class="fas fa-fw fa-tags "></i>
           <span>Promo</span></a>
+      </li>        
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url('/test-ajax') }}">
+          <i class="fas fa-address-card"></i>
+          <span>Alamat Pengiriman</span></a>
       </li>  
        <li class="nav-item active">
         <a class="nav-link" href="{{ url('admin/user') }}">
