@@ -9,11 +9,11 @@ class AuthController extends Controller {
         return view('loginp3');
     } 
     function loginProcess(){
-        /*if(Auth::attempt(['email'=> request('email'),'password'=> request('password')])){
+        if(Auth::attempt(['email'=> request('email'),'password'=> request('password')])){
             return redirect('home')->with('success', 'Login Berhasil');
         }else{
             return back()->with('danger', 'Login Gagal,silahkan cek email dan password anda');
-        }*/
+        }
        
         //menggunakan leveling
         /*if(Auth::attempt(['email'=> request('email'),'password'=> request('password')])){
@@ -28,7 +28,7 @@ class AuthController extends Controller {
         //digunakan saat user memeliki tujuan atau misi yang berbeda.
         //contohnya:
         //pembeli dan penjual atau mahasiswa dan pegawai
-        if(request('login_as')== 1){
+        /*if(request('login_as')== 1){
             if(Auth::guard('pembeli')->attempt(['email' => request('email'), 'password' => request('password')])){
                 return redirect('home/pembeli')->with('success', 'Login Berhasil');
             }else {
@@ -40,7 +40,7 @@ class AuthController extends Controller {
             }else {
                 return back()->with('danger', 'Login Gagal,silahkan cek email dan password anda');
             }
-    }
+    }*/
 }
     function logout(){
         Auth::logout();

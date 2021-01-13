@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\UserDetail;
+use App\Http\Requests\UserStoreRequest;
+
 
 class UserController extends Controller {
     function index(){
@@ -18,15 +20,13 @@ class UserController extends Controller {
         return view('user.create');
     }
     
-    function store(){
+    function store(UserStoreRequest $request ){
+        /* validate manual
         $validated = request()->validate([
             'nama' => ['required'],
             'username' => ['required'],
             'email' => ['required']
-
-        ]);
-
-
+        ]);*/
         $user = new User;
         $user->nama = request('nama');
         $user->username = request('username');
