@@ -19,6 +19,14 @@ class UserController extends Controller {
     }
     
     function store(){
+        $validated = request()->validate([
+            'nama' => ['required'],
+            'username' => ['required'],
+            'email' => ['required']
+
+        ]);
+
+
         $user = new User;
         $user->nama = request('nama');
         $user->username = request('username');

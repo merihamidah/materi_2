@@ -135,9 +135,15 @@
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                  @if(Auth::check())
                   {{ request()->user()->nama }}
-                  @else
+                @elseif(Auth::guard('pembeli')->check())
+                  {{ Auth::guard('pembeli')->user()->nama }}
+                  <br>Pembeli                  
+                @elseif(Auth::guard('penjual')->check())
+                  {{ Auth::guard('penjual')->user()->nama }}
+                  <br>Penjual 
+                @else                 
                   Silahkan Login Kembali
-                  @endif
+                @endif
                 </span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>

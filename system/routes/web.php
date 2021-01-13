@@ -74,6 +74,7 @@ Route::get('project3', function(){
 });
 
 Route::get('home', [HomeController::class, 'showHome']);
+Route::get('home/{status}', [HomeController::class, 'showHome']);
 Route::get('promo', [HomeController::class, 'showPromo']);
 Route::get('webtemplate', [HomeController::class, 'showWebtemplate']);
 Route::get('aboutus', [HomeController::class, 'showAboutUS']);
