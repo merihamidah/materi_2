@@ -42,6 +42,11 @@ class UserController extends Controller {
         return redirect('admin/user')->with('success','Data Berhasil Ditambahkan');
     }
     function show(User $user){
+        //show data user yang login
+        //yang tiak login tidak akan ditampilkan
+        $loggedUser = request()->user();
+        if($loggedUser->id != $user->id) return abort(403);//abort dilakukan unutuk mengamankan data dari user yang tidak berhak 
+
          $data['user'] = $user;
         return view('user.show',$data);
     }
